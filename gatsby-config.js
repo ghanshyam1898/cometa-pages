@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/cometa-pages",
   siteMetadata: {
     title: `Cometa Intellect LLP`,
     description: `Some Description.`,

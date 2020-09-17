@@ -1,0 +1,65 @@
+.navigation{
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	z-index: $z-2;
+	& * {
+		height: $nav-height;
+		line-height: $nav-height;
+	}
+	ul{display: flex;padding: 0 1rem;}
+	ul li a{
+		display: inline-block;
+		padding: 0 .5rem;
+		color: $c3;
+		font-size: $fz-sm;
+		font-weight: $mid;
+	}
+	ul li button{
+		height: $nav-height - 2rem;
+		line-height: $nav-height - 2rem;
+		padding: 0 .75rem;
+		margin: 0 .5rem;
+	}
+
+	@include respond(tab){
+		display: none;
+	}
+
+
+	&-side{
+		ul li a{
+			&:hover{background-color: rgba(0,0,0,.05);}
+			display: block;
+			padding: .5rem 1rem;
+			color: $c3;
+			font-size: $fz-sm;
+			font-weight: $mid;
+		}
+		&.open{
+			width: 200px;
+		}
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #fff;
+		width: 0;
+		height: 100%;
+		overflow: hidden;
+		z-index: $z-3;
+		transition: width 200ms ease-in;
+	}
+}
+.nav-bg{
+	&.close{
+		display: none;
+	}
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba($cd,.5);
+	z-index: $z-2;
+}

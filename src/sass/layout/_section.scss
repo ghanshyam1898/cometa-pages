@@ -1,0 +1,47 @@
+.section{
+	min-height: 50vh;
+	padding: 2rem 2rem 3rem;
+	&:not(:last-of-type){
+		border-bottom: 1px solid $cl-2;
+	}
+}
+.section_clients{
+	padding: 2rem 0 3rem;
+}
+.os-container{
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+	a{
+		margin: 0 1rem;
+	}
+	@include respond(phone){
+		padding: 1.5rem 0;
+		flex-wrap: wrap;
+	}
+}
+.section-learning{
+	background-color: $c4;
+	color: $cd;
+	h2{
+		color: #fff;
+	}
+	p{
+		font-size: $fz-sm;
+		font-weight: $default;
+		color: #fff;
+		letter-spacing: 1px;
+	}
+	ul li a{
+		color: $cd;
+	}
+}
+.section-newletter {
+	padding: 3rem;
+	@include respond(tab){
+		padding: 1rem;
+	}
+	@include respond(phone){
+		padding: 0;
+	}
+}

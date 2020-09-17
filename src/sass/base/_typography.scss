@@ -1,0 +1,15 @@
+.section-heading{
+	font-size: $fz-xlg;
+	font-weight: $bold;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 1rem 0 2rem;
+	color: $cd-2;
+	span{
+		color: $cd;
+	}
+}
+.section-text{
+	font-size: $fz-mid;
+	text-align: center;
+}

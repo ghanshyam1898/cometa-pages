@@ -1,0 +1,45 @@
+.header{
+	background-color: $cl-3;
+	color: $cd-3;
+	height: $nav-height;
+	z-index: $z-2;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 2px 4px rgba(0,0,0,.12);
+}
+.brand{
+	display: flex;
+	align-items: center;
+	padding: 0 1rem;
+}
+.brand-logo{
+	height: 100%;
+	img{
+		height: $nav-height - 1rem;
+	}
+}
+.nav-btn{
+	align-self: center;
+	height: calc(1rem + 24px);
+	line-height: calc(1rem + 24px);
+	padding: .5rem;
+	margin-right: 1rem;
+	outline: none;
+	border-radius: 50%;
+	place-items: center;
+	cursor: pointer;
+	transition: background-color 300ms;
+	display: none;
+	@include respond(tab){
+		display: grid;
+	}
+	&:hover,&:focus{
+		background-color: $cl-2;
+		svg{
+			stroke: #212121;
+		}
+	}
+	svg{
+		stroke: $cd;
+	}
+}

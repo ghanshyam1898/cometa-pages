@@ -1,0 +1,49 @@
+.i-s{
+	width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+.i-b{
+  width: 32px;
+  height: 32px;
+}
+
+.abs-center{
+  display: grid;
+  place-items: center;
+}
+.icon-item{
+  display: flex;
+  align-items: center;
+  svg{margin-right: 1rem;}
+  // a{font-size: $fz-mid;}
+}
+.marquee{
+	display: inline-flex;
+	align-items: center;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+.icon-link{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+	font-weight: $bold;
+  span{
+    font-size: $fz-sm;
+  }
+  svg{
+    margin-left: .5rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  &:hover,&:focus{
+		text-decoration: underline;
+		text-decoration-color: $c3;
+		svg{color: $c3;}
+  }
+}

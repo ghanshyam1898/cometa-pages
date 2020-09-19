@@ -17,6 +17,11 @@ import KIImg from '../images/site/clients/kiteintellect.png'
 import KSImg from '../images/site/clients/kedia_steel_corporation.png'
 import GCEKImg from '../images/site/clients/gcek.png'
 //
+import GhanuImg from '../images/site/team/ghanshyam.png'
+import SumanImg from '../images/site/team/suman.png'
+import SarojImg from '../images/site/team/saroj.png'
+import SakshiImg from '../images/site/team/sakshi_uppoor.png'
+//
 import GPIcon from '../images/google-play-badge.png'
 import FeatherIcon from "../components/FeatherIcon"
 
@@ -28,12 +33,17 @@ const IndexPage = () => (
         <h1><span>Welcome to</span>Cometa Intellect LLP</h1>
       </div>
     </header>
-    <section className="section section_features">
+    <article className="announcement-inside">
+      <FeatherIcon classes="i-b" icon="award" />
+      <h2>Hackathons</h2>
+      <p>We’re working on it. Something cool coming up :p</p>
+    </article>
+    <section className="section section_features" id="features">
       <h2 className="section-heading"><span>Features</span> We Provide</h2>
       <div className="features">
         <article className="feature">
           <figure className="feature__img abs-center">
-            <img src={AndroidImg} alt="Android Apps"/>
+            <img src={AndroidImg} alt="Android Apps" />
           </figure>
           <h3 className="feature__head">Android Apps <span>(Insert something here)</span></h3>
           <p className="feature__text">Mobile apps built using java or kotlin programming languages and run on Android devices</p>
@@ -75,7 +85,7 @@ const IndexPage = () => (
         </article>
       </div>
     </section>
-    <section className="section section-projects">
+    <section className="section section-projects" id="projects">
       <h2 className="section-heading">Our <span>Projects</span></h2>
       <div className="projects">
         <Project
@@ -120,20 +130,7 @@ const IndexPage = () => (
         />
       </div>
     </section>
-    <section className="section section_clients">
-      <h2 className="section-heading">Trusted by <span>Clients</span></h2>
-      <div className="clients">
-        <div className="client">
-          <img src={GCEKImg} alt="GCEK" />
-          <img src={KSImg} alt="Kedia Steel Corporation" />
-          <img src={WSAImg} alt="World Startups Association" />
-          <img src="" alt="SS Solutions Exams Platform" />
-          <img src={HerbicalImg} alt="Herbical" />
-          <img src={TrueBuddyImg} alt="Truebuddy.com" style={{'borderRadius':'8px'}} />
-        </div>
-      </div>
-    </section>
-    <section className="section">
+    <section className="section" id="open_source">
       <h2 className="section-heading">Cometa <span aria-label="Love" role="img">❤️</span> <span>Open Source</span></h2>
       <p className="section-text">Some of the great open source projects we admire.</p>
       <div className="os-container">
@@ -141,7 +138,7 @@ const IndexPage = () => (
           <img src="./open/android-logo.png" alt="Android" />
           <div className="icon-link">
             <span>Android</span>
-            <FeatherIcon icon="external-link"/>
+            <FeatherIcon icon="external-link" />
           </div>
         </a>
         <a href="https://github.com/nginx/nginx" target="_black" rel="noreferrer noopener" className="icon-display">
@@ -174,10 +171,23 @@ const IndexPage = () => (
         </a>
       </div>
     </section>
-    <section className="section section-learning">
+    <section className="section section_clients" id="clients">
+      <h2 className="section-heading">Trusted by <span>Clients</span></h2>
+      <div className="clients">
+        <div className="client">
+          <img src={GCEKImg} alt="GCEK" />
+          <img src={KSImg} alt="Kedia Steel Corporation" />
+          <img src={WSAImg} alt="World Startups Association" />
+          <img src="" alt="SS Solutions Exams Platform" />
+          <img src={HerbicalImg} alt="Herbical" />
+          <img src={TrueBuddyImg} alt="Truebuddy.com" style={{ 'borderRadius': '8px' }} />
+        </div>
+      </div>
+    </section>
+    <section className="section section-learning" id="learning">
       <h2 className="section-heading">Learning &amp; Certifications</h2>
       <p className="section-text">We have been developing our own courses for advanced computer science. Until its ready, checkout some great courses we appreciate.</p>
-      <div className="abs-center" style={{'height':'8rem'}}>
+      <div className="abs-center" style={{ 'height': '8rem' }}>
         <ul>
           <li>
             <a className="icon-link" target="_blank" rel="noreferrer noopener" href="https://classroom.udacity.com/courses/ud851">
@@ -200,15 +210,43 @@ const IndexPage = () => (
         </ul>
       </div>
     </section>
-    <article className="announcement-inside">
-      <FeatherIcon classes="i-b" icon="award"/>
-      <h2>Hackathons</h2>
-      <p>We’re working on it. Something cool coming up :p</p>
-    </article>
+    <section className="section section-team">
+      <h2 className="section-heading">The <span>Team</span></h2>
+      <div className="team">
+        <div className="member">
+          <figure>
+            <img src={GhanuImg} alt="Ghanshyam Agrawal" />
+          </figure>
+          <h3>Ghanshyam Agrawal</h3>
+          <p>Founder</p>
+        </div>
+        <div className="member">
+          <figure>
+            <img src={SumanImg} alt="Suman Agrawal" />
+          </figure>
+          <h3>Suman Agrawal</h3>
+          <p>Designation</p>
+        </div>
+        <div className="member">
+          <figure>
+            <img src={SarojImg} alt="Saroj Kumar Sahoo" />
+          </figure>
+          <h3>Saroj Kumar Sahoo</h3>
+          <p>Designation</p>
+        </div>
+        <div className="member">
+          <figure>
+            <img src={SakshiImg} alt="Sakshi Uppoor" />
+          </figure>
+          <h3>Sakshi Uppoor</h3>
+          <p>Designation</p>
+        </div>
+      </div>
+    </section>
     <section className="section-newletter abs-center">
       <div className="newletter-form-container">
         <h3>Signup to our Monthly Newletter, get Exciting Benefits!</h3>
-        <form action="" method='POST' onSubmit={(event)=>{event.preventDefault()}}>
+        <form action="" method='POST' onSubmit={(event) => { event.preventDefault() }}>
           <div className="input-field">
             <input type="email" name="email" placeholder="e.g. me@example.com" required />
             <button type="submit" className="button button-submit">Submit</button>

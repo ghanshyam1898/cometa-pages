@@ -7,8 +7,9 @@ button{
 	border-radius: 4px;
 	outline: none;
 	padding: .5rem .75rem;
-	font-size: $fz-sm; //padding*2+margin+2
+	font-size: $fz-sm - .1rem; //padding*2+margin+2
 	cursor: pointer;
+	text-transform: uppercase;
 }
 .button-nav{
 	color: $cd;

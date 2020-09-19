@@ -45,3 +45,8 @@
 		padding: 0;
 	}
 }
+.section-team{
+	@include respond(phone){
+		padding: 1rem .5rem 2rem;
+	}
+}

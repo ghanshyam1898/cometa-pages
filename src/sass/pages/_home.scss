@@ -199,3 +199,40 @@
 		}
 	}
 }
+.team{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	justify-items: center;
+	grid-gap: 2rem;
+
+	@include respond(tab){
+		grid-template-columns: repeat(2,1fr);
+		grid-gap: 1.5rem;
+	}
+	@include respond(phone){
+		grid-template-columns: repeat(2,1fr);
+		grid-gap: .5rem;
+	}@include respond(small-phone){
+		grid-template-columns: 1fr;
+	}
+}
+.member{
+	display: grid;
+	grid-template-columns: max-content;
+	grid-template-rows: 10rem 1em*1.5 1em;
+	grid-gap: .5rem;
+	justify-items: center;
+	figure{
+		border-radius: 50%;
+		background-color: $c3;
+		overflow: hidden;
+		img{
+			width: 10rem;
+			height: 10rem;
+		}
+	}
+	p{
+		font-size: $fz-sm;
+		line-height: 1;
+	}
+}

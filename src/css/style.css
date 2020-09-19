@@ -82,7 +82,7 @@ a, a:link, a:visited {
   animation: marquee 15s linear infinite; }
 
 .icon-link {
-  display: inline-flex;
+  display: inline-flex !important;
   justify-content: center;
   align-items: center;
   font-weight: 700; }
@@ -92,6 +92,9 @@ a, a:link, a:visited {
     margin-left: .5rem;
     width: 1rem;
     height: 1rem; }
+  .icon-link.left svg {
+    margin: 0;
+    margin-right: .5rem; }
   .icon-link:hover, .icon-link:focus {
     text-decoration: underline;
     text-decoration-color: #e61c5d; }
@@ -107,8 +110,9 @@ button {
   border-radius: 4px;
   outline: none;
   padding: .5rem .75rem;
-  font-size: 0.85rem;
-  cursor: pointer; }
+  font-size: 0.75rem;
+  cursor: pointer;
+  text-transform: uppercase; }
 
 .button-nav {
   color: #343434; }
@@ -155,6 +159,10 @@ button {
   .footer-nav-box h2 {
     font-size: 1.15rem;
     margin: .5rem 0 1rem; }
+  .footer-nav-box ul {
+    width: max-content;
+    text-align: left;
+    margin: 0 auto; }
   .footer-nav-box-links a {
     display: inline-block;
     font-size: 0.85rem;
@@ -257,7 +265,7 @@ button {
     height: 100%;
     overflow: hidden;
     z-index: 15;
-    transition: width 200ms ease-in; }
+    transition: width 200ms cubic-bezier(0.86, 0.01, 0.77, 0.78) 0s; }
     .navigation-side ul li a {
       display: block;
       padding: .5rem 1rem;
@@ -321,6 +329,10 @@ button {
   @media screen and (max-width: 575px) {
     .section-newletter {
       padding: 0; } }
+
+@media screen and (max-width: 575px) {
+  .section-team {
+    padding: 1rem .5rem 2rem; } }
 
 .hero {
   background-color: #ffbd39;
@@ -489,3 +501,37 @@ button {
     @media screen and (max-width: 575px) {
       .input-field button {
         flex: 0 0 4rem; } }
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-gap: 2rem; }
+  @media screen and (max-width: 850px) {
+    .team {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.5rem; } }
+  @media screen and (max-width: 575px) {
+    .team {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: .5rem; } }
+  @media screen and (max-width: 385px) {
+    .team {
+      grid-template-columns: 1fr; } }
+
+.member {
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rows: 10rem 1.5em 1em;
+  grid-gap: .5rem;
+  justify-items: center; }
+  .member figure {
+    border-radius: 50%;
+    background-color: #e61c5d;
+    overflow: hidden; }
+    .member figure img {
+      width: 10rem;
+      height: 10rem; }
+  .member p {
+    font-size: 0.85rem;
+    line-height: 1; }

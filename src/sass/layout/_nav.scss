@@ -48,7 +48,7 @@
 		height: 100%;
 		overflow: hidden;
 		z-index: $z-3;
-		transition: width 200ms ease-in;
+		transition: width 200ms cubic-bezier(.86,.01,.77,.78) 0s;
 	}
 }
 .nav-bg{

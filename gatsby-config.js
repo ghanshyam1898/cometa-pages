@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/cometa-pages",
+  // pathPrefix: "/cometa-pages",
   siteMetadata: {
     title: `Cometa Intellect LLP`,
     description: `Some Description.`,
@@ -22,8 +22,8 @@ module.exports = {
         name: `cometa-intellect-llp`,
         short_name: `cometa intellect`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#3a0088`,
+        theme_color: `#3a0088`,
         display: `minimal-ui`,
         icon: `src/images/site/logo.png`, // This path is relative to the root of the site.
       },

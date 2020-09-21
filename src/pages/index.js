@@ -218,28 +218,28 @@ const IndexPage = () => (
             <img src={GhanuImg} alt="Ghanshyam Agrawal" />
           </figure>
           <h3>Ghanshyam Agrawal</h3>
-          <p>Founder</p>
+          {/* <p>Founder</p> */}
         </div>
         <div className="member">
           <figure>
             <img src={SumanImg} alt="Suman Agrawal" />
           </figure>
           <h3>Suman Agrawal</h3>
-          <p>Designation</p>
+          {/* <p>Designation</p> */}
         </div>
         <div className="member">
           <figure>
             <img src={SarojImg} alt="Saroj Kumar Sahoo" />
           </figure>
           <h3>Saroj Kumar Sahoo</h3>
-          <p>Designation</p>
+          {/* <p>Designation</p> */}
         </div>
         <div className="member">
           <figure>
             <img src={SakshiImg} alt="Sakshi Uppoor" />
           </figure>
           <h3>Sakshi Uppoor</h3>
-          <p>Designation</p>
+          {/* <p>Designation</p> */}
         </div>
       </div>
     </section>

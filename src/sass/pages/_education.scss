@@ -1,0 +1,28 @@
+.education-intro{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+	justify-content: center;
+	align-items: stretch;
+	grid-gap: 1rem;
+
+	@include respond(phone){
+	grid-template-columns: 1fr;
+	}
+
+	figure{
+		width: 100%;
+		max-width: 25rem;
+		img{
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+.education-cta{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+}

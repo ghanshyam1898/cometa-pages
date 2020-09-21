@@ -156,6 +156,9 @@ button {
 
 .footer .edu-footer {
   grid-template-columns: repeat(2, 1fr); }
+  @media screen and (max-width: 575px) {
+    .footer .edu-footer {
+      grid-template-columns: 1fr; } }
 
 .footer-nav-box {
   text-align: center; }
@@ -543,7 +546,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .education-header button {
+  .education-header .button {
     margin: 0 1rem; }
 
 .education-intro {

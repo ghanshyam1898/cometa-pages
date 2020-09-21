@@ -53,3 +53,14 @@
 		svg{color: $c3;}
   }
 }
+.center{
+  text-align: center !important;
+}
+.right-align{
+  text-align: right !important;
+}
+.divider{
+  height: 1px;
+  margin: 1rem 0;
+  background-color: $cl-2;
+}

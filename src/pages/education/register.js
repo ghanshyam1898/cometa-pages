@@ -30,8 +30,8 @@ const Register = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
+		console.log('submit')
 		makePayMent(regData, (data) => {
-			console.log(data)
 			setPay1Data(data)
 			if (typeof window !== 'undefined') {
 				window.localStorage.setItem('payData', JSON.stringify(data))
@@ -59,46 +59,41 @@ const Register = () => {
 					</Helmet>
 				</section>
 			</>) : (<>
-				<form method="POST" action="" onSubmit={handleSubmit}>
-					<div className="">
-						<label htmlFor="f_name">
-							Full Name
-				</label>
-						<input type="text" name="f_name" id="f_name" onChange={(e) => { setRegData({ ...regData, "full_name": e.target.value }) }} />
+				<section className="section">
+					<div className="form_container">
+						<h2 className="center">Register for App Developer</h2>
+						<div className="divider"></div>
+						<form method="POST" action="" onSubmit={handleSubmit}>
+							<div className="input_field">
+								<label htmlFor="f_name">Full Name</label>
+								<input type="text" name="f_name" id="f_name" placeholder="e.g. Harry Potter" onChange={(e) => { setRegData({ ...regData, "full_name": e.target.value }) }} required />
+							</div>
+							<div className="input_field">
+								<label htmlFor="std">Standard</label>
+								<select name="std" id="std" onBlur={(e) => { setRegData({ ...regData, "standard": e.target.value }) }} defaultValue="" required>
+									<option value="">SELECT</option>
+									<option value="5">5th</option>
+									<option value="6">6th</option>
+									<option value="7">7th</option>
+									<option value="8">8th</option>
+									<option value="9">9th</option>
+									<option value="10">10th</option>
+								</select>
+							</div>
+							<div className="input_field">
+								<label htmlFor="p_no">Phone Number</label>
+								<input type="number" name="p_no" id="p_no" onChange={(e) => { setRegData({ ...regData, "phone_number": e.target.value }) }} required />
+							</div>
+							<div className="input_field">
+								<label htmlFor="place">Place</label>
+								<input type="text" name="place" placeholder="e.g. Hogwarts" onChange={(e) => { setRegData({ ...regData, "place": e.target.value }) }} required />
+							</div>
+							<div className="input_field right-align">
+								<button type="submit" className="button button-nav-p edu-reg-btn">Submit</button>
+							</div>
+						</form>
 					</div>
-					<div className="">
-						<label htmlFor="std">
-							Standard
-				</label>
-						<select name="std" id="std" onBlur={(e) => { setRegData({ ...regData, "standard": e.target.value }) }}>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-						</select>
-					</div>
-					<div className="">
-						<label htmlFor="p_no">
-							Phone Number
-				</label>
-						<input type="number" name="p_no" id="p_no" onChange={(e) => { setRegData({ ...regData, "phone_number": e.target.value }) }} />
-					</div>
-					<div className="">
-						<label htmlFor="place">
-							Place
-				</label>
-						<textarea name="place" onChange={(e) => { setRegData({ ...regData, "place": e.target.value }) }}></textarea>
-					</div>
-					<div className="">
-						<button type="submit">Submit</button>
-					</div>
-				</form>
+				</section>
 			</>)}
 
 		</Layout2>

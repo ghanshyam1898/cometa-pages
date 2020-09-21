@@ -36,7 +36,7 @@
 	}
 }
 .education-cta{
-	padding: .5rem 2.5rem;
+	padding: 1rem 3.5rem;
 	font-size: 1.25rem;
 	font-weight: 600;
 	border-radius: 8px;
@@ -94,5 +94,51 @@
 				font-weight: 600;
 			}
 		}
+	}
+}
+.edu-syllabus-fig{
+	max-width: 55rem;
+	width: 100%;
+	margin: 0 auto;
+	img{
+		width: 100%;
+		object-fit: contain;
+	}
+}
+//
+
+.form_container{
+	padding: 2rem;
+	border: 2px solid $cl-2;
+	border-radius: 8px;
+	background-color: #fff;
+
+	max-width: 25rem;
+	margin: 0 auto;
+
+	form {
+		label{
+			display: block;
+			margin-bottom: .5rem;
+			font-size: .95rem;
+		}
+		input,select{
+			outline: none;
+			display: block;
+			width: 100%;
+			padding: .5rem .75rem;
+			border: 2px solid $cl-2;
+			font-family: inherit;
+			font-size: .85rem;
+			border-radius: 4px;
+			&:focus{
+				border-color: $cl-1;
+			}
+		}
+	}
+}
+.input_field{
+	&:not(:last-child){
+		margin-bottom: 1rem;
 	}
 }

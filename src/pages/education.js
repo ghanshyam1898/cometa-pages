@@ -3,8 +3,8 @@ import Layout2 from '../components/layout2'
 import SEO from '../components/seo'
 import { Link } from 'gatsby'
 //
-import EduCometaImg from '../images/education/education_cometa2.jpeg'
-// import SyllabusImg from '../images/education/cometa_syllabus2.jpeg'
+import EduCometaImg from '../images/education/cometa_poster.png'
+import SyllabusImg from '../images/education/syllabus.png'
 import withCertImg from '../images/education/with_certificate2.png'
 
 const Education = () => {
@@ -31,7 +31,10 @@ const Education = () => {
 			</section>
 			<section className="section">
 				<h2 className="section-heading">Our <span>Syllabus</span></h2>
-				<table className="edu-table">
+				<figure className="edu-syllabus-fig">
+					<img src={SyllabusImg} alt="Cometa Syllabus" />
+				</figure>
+				{/* <table className="edu-table">
 					<thead>
 						<tr>
 							<th>
@@ -111,7 +114,10 @@ const Education = () => {
 							</td>
 						</tr>
 					</tbody>
-				</table>
+				</table> */}
+			</section>
+			<section className="abs-center" style={{ 'padding': '3rem' }}>
+				<Link className="button button-nav-p education-cta" to="/education/register">I want to Join</Link>
 			</section>
 		</Layout2>
 	)

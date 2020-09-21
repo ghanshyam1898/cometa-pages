@@ -117,7 +117,7 @@ const Education = () => {
 				</table> */}
 			</section>
 			<section className="abs-center" style={{ 'padding': '3rem' }}>
-				<Link className="button button-nav-p education-cta" to="/education/register">I want to Join</Link>
+				<Link className="button button-nav-p education-cta" to="/education/register">Join Now</Link>
 			</section>
 		</Layout2>
 	)

@@ -12,7 +12,7 @@ const Header2 = ({ siteTitle }) => {
             <img src={LogoLarge} alt={siteTitle} />
           </figure>
         </div>
-        <Link to="/education/register/" className="button button-nav-p" style={{ 'fontWeight': '700', 'borderRadius': '6px' }}>Register</Link>
+        <Link to="/education/register/" activeClassName="hidden" className="button button-nav-p" style={{ 'fontWeight': '700', 'borderRadius': '6px' }}>Register</Link>
       </header>
     </>
   )

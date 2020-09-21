@@ -22,8 +22,7 @@ module.exports = {
         name: `cometa-intellect-llp`,
         short_name: `cometa intellect`,
         start_url: `/`,
-        background_color: `#3a0088`,
-        theme_color: `#3a0088`,
+        background_color: `#ffbd39`,
         display: `minimal-ui`,
         icon: `src/images/site/logo.png`, // This path is relative to the root of the site.
       },

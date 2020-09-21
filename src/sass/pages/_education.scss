@@ -148,6 +148,7 @@
 	top: 0;
 	left: 0;
 	background-color: rgba(0,0,0,.25);
+	outline: none;
 	width: 100%;
 	height: 100vh;
 	z-index: 5;
@@ -170,5 +171,56 @@
 	display: none;
 	&.open{
 		display: block;
+	}
+}
+
+.message{
+	padding: 2rem;
+	text-align: center;
+	border: 1px solid transparent;
+	svg{
+		width: 3rem;
+		height: 3rem;
+	}
+	h1{
+		margin: 1rem 0 0;
+	}
+	&.success{
+		// background-color: #00C851;
+		// border-color: #007E33;
+		color: #007E33;
+	}
+	&.error{
+		// background-color: #ff4444;
+		// border-color:#CC0000;
+		color:#CC0000;
+	}
+	&.warn{
+		// background-color: #ffbb33;
+		// border-color: #FF8800;
+		color: #FF8800;
+	}
+}
+
+.section-pay-status{
+	position: relative;
+	min-height: 80vh;
+	overflow: hidden;
+}
+.section-pay-design{
+	position: absolute;
+	top: -5rem;
+	right: -5rem;
+	width: 10rem;
+	height: 10rem;
+	transform: rotate(45deg);
+	&.success{
+		background-color: #007E33;
+	}
+	&.error{
+		background-color: #CC0000;
+	}
+	&.warn{
+		background-color: #FF8800;
 	}
 }

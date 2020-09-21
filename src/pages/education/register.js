@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Layout2 from '../../components/layout2'
 import SEO from '../../components/seo'
-import { Helmet } from 'react-helmet'
 
 const Register = () => {
 
@@ -15,6 +14,7 @@ const Register = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [loading, setLoading] = useState(false)
 	const [processing, setProcessing] = useState(false)
+	const [pay1Err, setPay1Err] = useState(undefined)
 
 	const makePayMent = (data, callback) => {
 		fetch(`https://quiz-app.cometaintellect.com/apiv1/save_form_and_generate_paytm_checksum/`, {
@@ -36,11 +36,16 @@ const Register = () => {
 		console.log('submit')
 		setLoading(true)
 		makePayMent(regData, (data) => {
-			setPay1Data(data)
 			setLoading(false)
-			setIsModalOpen(true)
-			if (typeof window !== 'undefined') {
-				window.localStorage.setItem('payData', JSON.stringify(data))
+			if (data && data.mid) {
+				setPay1Data(data)
+				setIsModalOpen(true)
+				if (typeof window !== 'undefined') {
+					window.localStorage.setItem('payData', JSON.stringify(data))
+				}
+			}
+			else {
+				setPay1Err(data)
 			}
 		})
 	}
@@ -57,7 +62,7 @@ const Register = () => {
 	return (
 		<Layout2>
 			<SEO title="Register - Education @ Cometa" />
-			<div className={`modal-bg ${isModalOpen ? 'open' : ''}`} onClick={closeModal}></div>
+			<div className={`modal-bg ${isModalOpen ? 'open' : ''}`} aria-label="Pay Modal Close" onClick={closeModal} role="button" tabIndex={0} onKeyDown={() => { }}></div>
 			<div className={`modal ${isModalOpen ? 'open' : ''}`}>
 				<div className="modal-content">
 					<h3>Almost There!</h3>
@@ -80,8 +85,9 @@ const Register = () => {
 			</div>
 			<section className="section">
 				<div className="form_container">
-					<h2 className="center">Register for App Developer</h2>
+					<h2 className="center">Register for App Developer Coaching</h2>
 					<div className="divider"></div>
+					{pay1Err ? (<p className="err-text">API_ERR, Please reload.</p>) : (<></>)}
 					<form method="POST" action="" onSubmit={handleSubmit}>
 						<div className="input_field">
 							<label htmlFor="f_name">Full Name</label>

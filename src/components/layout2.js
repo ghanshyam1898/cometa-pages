@@ -29,7 +29,7 @@ const Layout2 = ({ children }) => {
         <main>{children}</main>
         <div className="footer">
           <nav className="edu-footer">
-            <div className="footer-nav-box footer-nav-social" id="contact">
+            <div className="footer-nav-box" id="contact">
               <h2>Connect with Us</h2>
               <ul className="footer-nav-box-links">
                 <li className="social-media-list">

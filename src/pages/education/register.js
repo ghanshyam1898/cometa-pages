@@ -13,6 +13,8 @@ const Register = () => {
 	})
 	const [pay1Data, setPay1Data] = useState(undefined)
 	const [isModalOpen, setIsModalOpen] = useState(false)
+	const [loading, setLoading] = useState(false)
+	const [processing, setProcessing] = useState(false)
 
 	const makePayMent = (data, callback) => {
 		fetch(`https://quiz-app.cometaintellect.com/apiv1/save_form_and_generate_paytm_checksum/`, {
@@ -32,8 +34,10 @@ const Register = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		console.log('submit')
+		setLoading(true)
 		makePayMent(regData, (data) => {
 			setPay1Data(data)
+			setLoading(false)
 			setIsModalOpen(true)
 			if (typeof window !== 'undefined') {
 				window.localStorage.setItem('payData', JSON.stringify(data))
@@ -42,6 +46,7 @@ const Register = () => {
 	}
 
 	const submitPay1 = () => {
+		setProcessing(true)
 		document.getElementById('pay1Form').submit();
 	}
 
@@ -55,7 +60,7 @@ const Register = () => {
 			<div className={`modal-bg ${isModalOpen ? 'open' : ''}`} onClick={closeModal}></div>
 			<div className={`modal ${isModalOpen ? 'open' : ''}`}>
 				<div className="modal-content">
-					<h3>Payment</h3>
+					<h3>Almost There!</h3>
 					<p>You can pay the first month fees &#x20B9; 3000 to complete your registration.</p>
 					{pay1Data ? (<>
 						<form id="pay1Form" method="post" action={`https://securegw-stage.paytm.in/theia/api/v1/showPaymentPage?mid=${pay1Data.mid}&orderId=${pay1Data.orderId}`} name="paytm">
@@ -63,8 +68,12 @@ const Register = () => {
 							<input type="hidden" name="orderId" value={pay1Data.orderId} />
 							<input type="hidden" name="txnToken" value={pay1Data.txnToken} />
 						</form>
-						<div className="right-align">
-							<button className="button button-nav-p" onClick={submitPay1}>Pay Now</button>
+						<div className="right-align" style={{ 'marginTop': '2rem' }}>
+							{processing ? (<>
+								<button className="button disabled">Processing ...</button>
+							</>) : (<>
+								<button className="button button-nav-p" onClick={submitPay1}>Pay Now</button>
+							</>)}
 						</div>
 					</>) : (<></>)}
 				</div>
@@ -99,7 +108,11 @@ const Register = () => {
 							<input type="text" name="place" placeholder="e.g. Hogwarts" onChange={(e) => { setRegData({ ...regData, "place": e.target.value }) }} required />
 						</div>
 						<div className="input_field right-align">
-							<button type="submit" className="button button-nav-p edu-reg-btn">Submit</button>
+							{loading ? (
+								<button className="button disabled edu-reg-btn">Submitting...</button>
+							) : (
+									<button type="submit" className="button button-nav-p edu-reg-btn">Submit</button>
+								)}
 						</div>
 					</form>
 				</div>

@@ -30,7 +30,6 @@ const Education = () => {
 				</div>
 			</section>
 			<section className="section">
-				<h2 className="section-heading">Our <span>Syllabus</span></h2>
 				<figure className="edu-syllabus-fig">
 					<img src={SyllabusImg} alt="Cometa Syllabus" />
 				</figure>

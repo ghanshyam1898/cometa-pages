@@ -41,3 +41,9 @@ button{
 		padding: .25rem .5rem;
 	}
 }
+.disabled{
+	user-select: none !important;
+	pointer-events: none;
+	background-color: $cl !important;
+	color: $cd-1 !important;
+}

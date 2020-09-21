@@ -33,7 +33,7 @@ const Layout2 = ({ children }) => {
               <h2>Connect with Us</h2>
               <ul className="footer-nav-box-links">
                 <li className="social-media-list">
-                  <a href="#!">
+                  <a href="https://www.facebook.com/cometa.intellect" target="_blank" rel="noreferrer noopener">
                     <FeatherIcon
                       icon="facebook"
                     />
@@ -43,12 +43,12 @@ const Layout2 = ({ children }) => {
                       icon="instagram"
                     />
                   </a>
-                  <a href="#!">
+                  <a href="https://cometa-intellect-llp.slack.com" target="_blank" rel="noreferrer noopener">
                     <FeatherIcon
                       icon="slack"
                     />
                   </a>
-                  <a href="#!">
+                  <a href="https://www.linkedin.com/company/cometa-intellect-llp/" target="_blank" rel="noreferrer noopener">
                     <FeatherIcon
                       icon="linkedin"
                     />

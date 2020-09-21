@@ -1,6 +1,15 @@
+.education-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	button{
+		margin: 0 1rem;
+	}
+}
 .education-intro{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto 6rem;
 	justify-items: center;
 	justify-content: center;
 	align-items: stretch;
@@ -8,6 +17,10 @@
 
 	@include respond(phone){
 	grid-template-columns: 1fr;
+	}
+
+	& .poster{
+		grid-row: 1/3;
 	}
 
 	figure{
@@ -23,6 +36,63 @@
 	}
 }
 .education-cta{
-	display: grid;
-	grid-template-columns: repeat(2,1fr);
+	padding: .5rem 2.5rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	border-radius: 8px;
+}
+.edu-table{
+	width: 100%;
+	max-width: 60rem;
+	margin: 0 auto;
+	thead tr th{
+		padding: .5rem 0 1rem;
+		&:first-child{
+			text-align: left;
+		}
+		&:last-child{
+			text-align: right;
+		}
+		span{
+			text-transform: uppercase;
+			font-weight: 400;
+			color: $cd-3;
+		}
+		h3{
+			text-transform: uppercase;
+			font-size: 1.5rem;
+		}
+	}
+	tbody tr{
+		td{
+			width: 50%;
+			&:first-child {
+				border-right: 2px solid $c3;
+				h4,ul{
+					text-align: left;
+				}
+			}
+			&:last-child {
+				h4,ul{
+					text-align: right;
+				}
+			}
+			h4{
+				color: $cd-3;
+			}
+			ul{
+				ul{
+					padding: 0;
+					li{
+						color: $cd-2;
+						font-weight: 400;
+					}
+				}
+			}
+			& > ul > li {
+				color: $cd;
+				font-weight: 600;
+			}
+		}
+	}
 }

@@ -15,6 +15,9 @@
 			grid-template-columns: 1fr;
 		}
 	}
+	.edu-footer{
+		grid-template-columns: repeat(2,1fr);
+	}
 }
 .footer-nav-box{
 	text-align: center;

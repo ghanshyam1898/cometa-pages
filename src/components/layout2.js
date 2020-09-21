@@ -28,7 +28,7 @@ const Layout2 = ({ children }) => {
       <div className="site-body">
         <main>{children}</main>
         <div className="footer">
-          <nav>
+          <nav className="edu-footer">
             <div className="footer-nav-box footer-nav-social" id="contact">
               <h2>Connect with Us</h2>
               <ul className="footer-nav-box-links">
@@ -60,15 +60,15 @@ const Layout2 = ({ children }) => {
               <h2>Contact Us</h2>
               <ul className="footer-nav-box-links">
                 <li>
-                  <a href="tel:+91378483412" className="icon-link left">
+                  <a href="tel:+918117014347" className="icon-link left">
                     <FeatherIcon icon="phone" />
-                    <span>+91-32926419</span>
+                    <span>+91-8117014347</span>
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:me@example.com" className="icon-link left">
+                  <a href="mailto:ghanshyam@cometaintellect.com" className="icon-link left">
                     <FeatherIcon icon="mail" />
-                    <span>me@example.com</span>
+                    <span>ghanshyam@cometaintellect.com</span>
                   </a>
                 </li>
               </ul>

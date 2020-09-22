@@ -68,6 +68,7 @@ const Register = () => {
 					<h3>Almost There!</h3>
 					<p>You can pay the first month fees &#x20B9; 3000 to complete your registration.</p>
 					{pay1Data ? (<>
+						{/* https://securegw-stage.paytm.in/ */}
 						<form id="pay1Form" method="post" action={`https://securegw.paytm.in/theia/api/v1/showPaymentPage?mid=${pay1Data.mid}&orderId=${pay1Data.orderId}`} name="paytm">
 							<input type="hidden" name="mid" value={pay1Data.mid} />
 							<input type="hidden" name="orderId" value={pay1Data.orderId} />

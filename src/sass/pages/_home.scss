@@ -158,6 +158,7 @@
 	color: #fff;
 	p{
 		color: $cl-3;
+		font-weight: $mid;
 	}
 }
 .newletter-form-container{
@@ -204,6 +205,7 @@
 	grid-template-columns: repeat(4,1fr);
 	justify-items: center;
 	grid-gap: 2rem;
+	padding: 0 3rem;
 
 	@include respond(tab){
 		grid-template-columns: repeat(2,1fr);
@@ -212,6 +214,7 @@
 	@include respond(phone){
 		grid-template-columns: repeat(2,1fr);
 		grid-gap: .5rem;
+		padding: 0;
 	}@include respond(small-phone){
 		grid-template-columns: 1fr;
 	}

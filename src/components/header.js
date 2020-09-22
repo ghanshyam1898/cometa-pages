@@ -43,7 +43,7 @@ const Header = ({ siteTitle }) => {
               <a href="/#learning">Learning</a>
             </li>
             <li>
-              <a href="/#about">About Us</a>
+              <a href="/#team">Team</a>
             </li>
           </ul>
           <ul>
@@ -79,7 +79,7 @@ const Header = ({ siteTitle }) => {
               <a href="/#learning">Learning</a>
             </li>
             <li>
-              <a href="/#about">About Us</a>
+              <a href="/#team">Team</a>
             </li>
             <li>
               <a href="/#contact">Query</a>

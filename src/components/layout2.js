@@ -38,7 +38,7 @@ const Layout2 = ({ children }) => {
                       icon="facebook"
                     />
                   </a>
-                  <a href="#!">
+                  {/* <a href="#!">
                     <FeatherIcon
                       icon="instagram"
                     />
@@ -47,7 +47,7 @@ const Layout2 = ({ children }) => {
                     <FeatherIcon
                       icon="slack"
                     />
-                  </a>
+                  </a> */}
                   <a href="https://www.linkedin.com/company/cometa-intellect-llp/" target="_blank" rel="noreferrer noopener">
                     <FeatherIcon
                       icon="linkedin"

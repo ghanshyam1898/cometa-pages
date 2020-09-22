@@ -234,6 +234,9 @@ button {
   .brand-logo img {
     height: 3rem; }
 
+.hero {
+  padding: 2rem; }
+
 .nav-btn {
   align-self: center;
   height: calc(1rem + 24px);
@@ -343,7 +346,8 @@ button {
     font-size: 0.85rem;
     font-weight: 400;
     color: #fff;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    font-weight: 600; }
   .section-learning ul li a {
     color: #343434; }
 
@@ -492,7 +496,8 @@ button {
   background-color: #e61c5d;
   color: #fff; }
   .announcement-inside p {
-    color: #eeeeee; }
+    color: #eeeeee;
+    font-weight: 600; }
 
 .newletter-form-container {
   padding: 1rem;
@@ -532,7 +537,8 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  grid-gap: 2rem; }
+  grid-gap: 2rem;
+  padding: 0 3rem; }
   @media screen and (max-width: 850px) {
     .team {
       grid-template-columns: repeat(2, 1fr);
@@ -540,7 +546,8 @@ button {
   @media screen and (max-width: 575px) {
     .team {
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: .5rem; } }
+      grid-gap: .5rem;
+      padding: 0; } }
   @media screen and (max-width: 385px) {
     .team {
       grid-template-columns: 1fr; } }

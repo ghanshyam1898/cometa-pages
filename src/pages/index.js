@@ -12,6 +12,7 @@ import WebImg from '../images/site/features/webapp.png'
 //
 import TrueBuddyImg from '../images/site/clients/truebuddy.png'
 import HerbicalImg from '../images/site/clients/herbical.png'
+import BidwaanImg from '../images/site/clients/bidwaan.png'
 import WSAImg from '../images/site/clients/wsa.png'
 import KIImg from '../images/site/clients/kiteintellect.png'
 import KSImg from '../images/site/clients/kedia_steel_corporation.png'
@@ -35,8 +36,8 @@ const IndexPage = () => (
     </header>
     <article className="announcement-inside">
       <FeatherIcon classes="i-b" icon="award" />
-      <h2>Hackathons</h2>
-      <p>We’re working on it. Something cool coming up :p</p>
+      <h2>Hackathons @ Cometa</h2>
+      <p>We’re working on it. Something cool coming up :)</p>
     </article>
     <section className="section section_features" id="features">
       <h2 className="section-heading"><span>Features</span> We Provide</h2>
@@ -45,7 +46,7 @@ const IndexPage = () => (
           <figure className="feature__img abs-center">
             <img src={AndroidImg} alt="Android Apps" />
           </figure>
-          <h3 className="feature__head">Android Apps <span>(Insert something here)</span></h3>
+          <h3 className="feature__head">Android Apps <span>(Native Android Apps - Java/Kotlin)</span></h3>
           <p className="feature__text">Mobile apps built using java or kotlin programming languages and run on Android devices</p>
         </article>
         <article className="feature">
@@ -103,9 +104,9 @@ const IndexPage = () => (
           pLinkImg={GPIcon}
         />
         <Project
-          pName="SS Solutions Exams Platform"
-          pImg={HerbicalImg}
-          pText="Take quiz tests online, improve your skills and performance and win exciting prizes."
+          pName="Bidwaan"
+          pImg={BidwaanImg}
+          pText="Online test and scholarship by SS Solutions."
         />
         <Project
           pName="World Startups Association"
@@ -135,7 +136,7 @@ const IndexPage = () => (
       <p className="section-text">Some of the great open source projects we admire.</p>
       <div className="os-container">
         <a href="https://source.android.com/" target="_black" rel="noreferrer noopener" className="icon-display">
-          <img src="./open/android-logo.png" alt="Android" />
+          <img src={AndroidImg} alt="Android" />
           <div className="icon-link">
             <span>Android</span>
             <FeatherIcon icon="external-link" />
@@ -156,7 +157,7 @@ const IndexPage = () => (
           </div>
         </a>
         <a href="https://github.com/django/django" target="_black" rel="noreferrer noopener" className="icon-display">
-          <img src="./open/django-logo.png" alt="Django" />
+          <img src="./open/django.webp" alt="Django" />
           <div className="icon-link">
             <span>Django</span>
             <FeatherIcon icon="external-link" />
@@ -178,7 +179,7 @@ const IndexPage = () => (
           <img src={GCEKImg} alt="GCEK" />
           <img src={KSImg} alt="Kedia Steel Corporation" />
           <img src={WSAImg} alt="World Startups Association" />
-          <img src="" alt="SS Solutions Exams Platform" />
+          <img src={BidwaanImg} alt="SS Solutions Exams Platform" style={{ 'borderRadius': '8px' }} />
           <img src={HerbicalImg} alt="Herbical" />
           <img src={TrueBuddyImg} alt="Truebuddy.com" style={{ 'borderRadius': '8px' }} />
         </div>
@@ -210,7 +211,7 @@ const IndexPage = () => (
         </ul>
       </div>
     </section>
-    <section className="section section-team">
+    <section className="section section-team" id="team">
       <h2 className="section-heading">The <span>Team</span></h2>
       <div className="team">
         <div className="member">
@@ -243,7 +244,7 @@ const IndexPage = () => (
         </div>
       </div>
     </section>
-    <section className="section-newletter abs-center">
+    {/* <section className="section-newletter abs-center">
       <div className="newletter-form-container">
         <h3>Signup to our Monthly Newletter, get Exciting Benefits!</h3>
         <form action="" method='POST' onSubmit={(event) => { event.preventDefault() }}>
@@ -253,7 +254,7 @@ const IndexPage = () => (
           </div>
         </form>
       </div>
-    </section>
+    </section> */}
   </Layout>
 )
 

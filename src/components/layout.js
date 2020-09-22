@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
               <h2>Quick Links</h2>
               <ul className="footer-nav-box-links">
                 <li>
-                  <a href="/#features" className="icon-link left">
+                  <a href="#features" className="icon-link left">
                     <FeatherIcon icon="award" />
                     <span>Features</span>
                   </a>
@@ -62,12 +62,12 @@ const Layout = ({ children }) => {
                     <span>Team</span>
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="/#about" className="icon-link left">
                     <FeatherIcon icon="info" />
                     <span>About Us</span>
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a href="https://angel.co/company/cometa-intellect/jobs" target="_blank" rel="noreferrer noopener" className="icon-link">
                     <span>Jobs</span>
@@ -80,12 +80,12 @@ const Layout = ({ children }) => {
               <h2>Connect with Us</h2>
               <ul className="footer-nav-box-links">
                 <li className="social-media-list">
-                  <a href="#!">
+                  <a href="https://www.facebook.com/cometa.intellect!" target="_blank" rel="noreferrer noopener">
                     <FeatherIcon
                       icon="facebook"
                     />
                   </a>
-                  <a href="#!">
+                  {/* <a href="#!">
                     <FeatherIcon
                       icon="instagram"
                     />
@@ -94,8 +94,8 @@ const Layout = ({ children }) => {
                     <FeatherIcon
                       icon="slack"
                     />
-                  </a>
-                  <a href="#!">
+                  </a> */}
+                  <a href="https://www.linkedin.com/company/cometa-intellect-llp/" target="_blank" rel="noreferrer noopener">
                     <FeatherIcon
                       icon="linkedin"
                     />
@@ -105,15 +105,15 @@ const Layout = ({ children }) => {
               <h2>Contact Us</h2>
               <ul className="footer-nav-box-links">
                 <li>
-                  <a href="tel:+91378483412" className="icon-link left">
+                  <a href="tel:+918117014347" className="icon-link left">
                     <FeatherIcon icon="phone" />
-                    <span>+91-32926419</span>
+                    <span>+91-8117014347</span>
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:me@example.com" className="icon-link left">
+                  <a href="mailto:ghanshyam@cometaintellect.com" className="icon-link left">
                     <FeatherIcon icon="mail" />
-                    <span>me@example.com</span>
+                    <span>ghanshyam@cometaintellect.com</span>
                   </a>
                 </li>
               </ul>

@@ -6,6 +6,9 @@
 	display: flex;
 	align-items: center;
 	box-shadow: 0 2px 4px rgba(0,0,0,.12);
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 .brand{
 	display: flex;

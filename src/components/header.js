@@ -4,6 +4,8 @@ import PropTypes from "prop-types"
 import LogoLarge from '../images/site/logo-large.png'
 import FeatherIcon from '../components/FeatherIcon'
 
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 const Header = ({ siteTitle }) => {
 
   const [navOpen, setNavOpen] = useState(false)
@@ -31,19 +33,38 @@ const Header = ({ siteTitle }) => {
         <nav className="navigation">
           <ul>
             <li>
-              <a href="/">Home</a>
+              <AnchorLink
+                to="/"
+                title="Home"
+              />
             </li>
             <li>
-              <a href="/#features">Features</a>
+              <AnchorLink
+                to="/#features"
+                title="Features"
+                stripHash
+              />
             </li>
             <li>
-              <a href="/#projects">Projects</a>
+              <AnchorLink
+                to="/#projects"
+                title="Projects"
+                stripHash
+              />
             </li>
             <li>
-              <a href="/#learning">Learning</a>
+              <AnchorLink
+                to="/#learning"
+                title="Learning"
+                stripHash
+              />
             </li>
             <li>
-              <a href="/#team">Team</a>
+              <AnchorLink
+                to="/#team"
+                title="Team"
+                stripHash
+              />
             </li>
           </ul>
           <ul>
@@ -54,11 +75,9 @@ const Header = ({ siteTitle }) => {
               <button className="button button-nav-p">Register</button>
             </li>
             <li>
-              <a href="/#contact" title="Query">
-                <FeatherIcon
-                  icon="help-circle"
-                />
-              </a>
+              <AnchorLink to="/#contact" title="Query">
+                <FeatherIcon icon="help-circle" />
+              </AnchorLink>
             </li>
           </ul>
         </nav>
@@ -67,22 +86,45 @@ const Header = ({ siteTitle }) => {
         <nav className={`navigation-side ${navOpen ? 'open' : ''}`}>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <AnchorLink
+                to="/"
+                title="Home"
+              />
             </li>
             <li>
-              <a href="/#features">Features</a>
+              <AnchorLink
+                to="/#features"
+                title="Features"
+                stripHash
+              />
             </li>
             <li>
-              <a href="/#projects">Projects</a>
+              <AnchorLink
+                to="/#projects"
+                title="Projects"
+                stripHash
+              />
             </li>
             <li>
-              <a href="/#learning">Learning</a>
+              <AnchorLink
+                to="/#learning"
+                title="Learning"
+                stripHash
+              />
             </li>
             <li>
-              <a href="/#team">Team</a>
+              <AnchorLink
+                to="/#team"
+                title="Team"
+                stripHash
+              />
             </li>
             <li>
-              <a href="/#contact">Query</a>
+              <AnchorLink
+                to="/#contact"
+                title="Query"
+                stripHash
+              />
             </li>
           </ul>
         </nav>

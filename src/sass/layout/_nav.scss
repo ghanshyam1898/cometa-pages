@@ -28,13 +28,16 @@
 
 
 	&-side{
-		ul li a{
-			&:hover{background-color: rgba(0,0,0,.05);}
-			display: block;
-			padding: .5rem 1rem;
-			color: $c3;
-			font-size: $fz-sm;
-			font-weight: $mid;
+		ul li {
+			border-bottom: 1px solid #ccc;
+			a{
+				&:hover{background-color: rgba(0,0,0,.05);}
+				display: block;
+				padding: .5rem 1rem;
+				color: $c3;
+				font-size: $fz-sm;
+				font-weight: $mid;
+			}
 		}
 		&.open{
 			width: 200px;

@@ -28,5 +28,5 @@ a,a:link,a:visited{
 	min-height: calc(100vh - 4rem);
 	display: flex;
 	flex-direction: column;
-	main{margin-bottom: auto;}
+	main{margin-bottom: auto;margin-top: $nav-height;}
 }

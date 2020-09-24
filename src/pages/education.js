@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 //
 import EduCometaImg from '../images/education/cometa_poster.png'
 import SyllabusImg from '../images/education/syllabus.png'
-import withCertImg from '../images/education/with_certificate2.png'
+import KidsCertImg from '../images/education/kids_certificate.png'
 
 const Education = () => {
 	return (
@@ -14,6 +14,9 @@ const Education = () => {
 			<header className="hero abs-center" style={{ 'minHeight': '35vh', 'padding': '2rem' }}>
 				<div className="hero-intro">
 					<h1>Education @ Cometa</h1>
+					{/* <figure >
+						<img src={withCertImg} alt="Aparna with Certificate" />
+					</figure> */}
 				</div>
 			</header>
 			<section className="section">
@@ -21,16 +24,17 @@ const Education = () => {
 					<figure className="poster">
 						<img src={EduCometaImg} alt="Education@Cometa" />
 					</figure>
-					<figure style={{ 'height': '23rem' }}>
-						<img src={withCertImg} alt="Aparna with Certificate" />
-					</figure>
+					<iframe className="cometa-iframe" title="Cometa App Developer Coaching" src="https://www.youtube.com/embed/toYac31Q9yU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style={{ 'height': '23rem' }}></iframe>
 					<div className="abs-center" style={{ 'padding': '1rem' }}>
 						<Link to="/education/register/" className="button button-nav-p education-cta">Register</Link>
 					</div>
 				</div>
 			</section>
-			<section className="section">
-				<figure className="edu-syllabus-fig">
+			<section className="section edu-syllabus">
+				<figure className="edu-syllabus-fig cert">
+					<img src={KidsCertImg} alt="Kids with Certificate" />
+				</figure>
+				<figure className="edu-syllabus-fig syllabus">
 					<img src={SyllabusImg} alt="Cometa Syllabus" />
 				</figure>
 			</section>

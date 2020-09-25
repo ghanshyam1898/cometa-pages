@@ -2,7 +2,7 @@ module.exports = {
   // pathPrefix: "/cometa-pages",
   siteMetadata: {
     title: `Cometa Intellect LLP`,
-    description: `App developer coaching for class 5th to 10th`,
+    description: `Cometa Intellect LLP`,
     author: `@dev_sarojkumar`,
   },
   plugins: [

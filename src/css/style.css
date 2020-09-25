@@ -750,7 +750,10 @@ button {
 
 .cometa-iframe {
   width: 100%;
-  height: inherit; }
+  height: 23rem; }
+  @media screen and (max-width: 575px) {
+    .cometa-iframe {
+      height: 15rem; } }
 
 .edu-syllabus {
   padding: 2rem;

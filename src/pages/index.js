@@ -28,7 +28,7 @@ import FeatherIcon from "../components/FeatherIcon"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Cometa Intellect LLP" single={true} />
     <header className="hero abs-center">
       <div className="hero-intro">
         <h1><span>Welcome to</span>Cometa Intellect LLP</h1>

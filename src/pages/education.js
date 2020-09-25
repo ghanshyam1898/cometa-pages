@@ -10,7 +10,7 @@ import KidsCertImg from '../images/education/kids_certificate.png'
 const Education = () => {
 	return (
 		<Layout2>
-			<SEO title="Education @ Cometa" />
+			<SEO title="Education @ Cometa" description="App developer coaching for class 5th to 10th" />
 			<header className="hero abs-center" style={{ 'minHeight': '35vh', 'padding': '2rem' }}>
 				<div className="hero-intro">
 					<h1>Education @ Cometa</h1>
@@ -24,7 +24,7 @@ const Education = () => {
 					<figure className="poster">
 						<img src={EduCometaImg} alt="Education@Cometa" />
 					</figure>
-					<iframe className="cometa-iframe" title="Cometa App Developer Coaching" src="https://www.youtube.com/embed/toYac31Q9yU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style={{ 'height': '23rem' }}></iframe>
+					<iframe className="cometa-iframe" title="Cometa App Developer Coaching" src="https://www.youtube.com/embed/toYac31Q9yU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<div className="abs-center" style={{ 'padding': '1rem' }}>
 						<Link to="/education/register/" className="button button-nav-p education-cta">Register</Link>
 					</div>

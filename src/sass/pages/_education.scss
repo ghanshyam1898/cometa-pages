@@ -233,7 +233,11 @@
 }
 .cometa-iframe{
 	width: 100%;
-	height: inherit;
+	height: 23rem;
+	
+	@include respond(phone){
+		height: 15rem;
+	}
 }
 .edu-syllabus{
 	padding: 2rem;

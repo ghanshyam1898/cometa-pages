@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import SEOImg from '../images/site/logo.png'
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, single }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -34,7 +34,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={single ? `%s` : `%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,

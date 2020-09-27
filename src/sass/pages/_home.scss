@@ -202,13 +202,13 @@
 }
 .team{
 	display: grid;
-	grid-template-columns: repeat(4,1fr);
+	grid-template-columns: repeat(5,1fr);
 	justify-items: center;
 	grid-gap: 2rem;
 	padding: 0 3rem;
 
 	@include respond(tab){
-		grid-template-columns: repeat(2,1fr);
+		grid-template-columns: repeat(3,1fr);
 		grid-gap: 1.5rem;
 	}
 	@include respond(phone){

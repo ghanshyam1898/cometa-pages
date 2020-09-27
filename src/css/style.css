@@ -541,13 +541,13 @@ button {
 
 .team {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   grid-gap: 2rem;
   padding: 0 3rem; }
   @media screen and (max-width: 850px) {
     .team {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 1.5rem; } }
   @media screen and (max-width: 575px) {
     .team {

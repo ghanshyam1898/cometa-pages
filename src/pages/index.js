@@ -22,6 +22,7 @@ import GhanuImg from '../images/site/team/ghanshyam.png'
 import SumanImg from '../images/site/team/suman.png'
 import SarojImg from '../images/site/team/saroj.png'
 import SakshiImg from '../images/site/team/sakshi_uppoor.png'
+import SupriyaImg from '../images/site/team/supriya.png'
 //
 import GPIcon from '../images/google-play-badge.png'
 import FeatherIcon from "../components/FeatherIcon"
@@ -233,6 +234,13 @@ const IndexPage = () => (
             <img src={SarojImg} alt="Saroj Kumar Sahoo" />
           </figure>
           <h3>Saroj Kumar Sahoo</h3>
+          {/* <p>Designation</p> */}
+        </div>
+        <div className="member">
+          <figure>
+            <img src={SupriyaImg} alt="Supriya Pradhan" />
+          </figure>
+          <h3>Supriya Pradhan</h3>
           {/* <p>Designation</p> */}
         </div>
         <div className="member">

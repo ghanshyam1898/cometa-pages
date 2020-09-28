@@ -64,15 +64,15 @@ const Layout = ({ children }) => {
                     <span>Team</span>
                   </AnchorLink>
                 </li>
-                {/* <li>
-                  <a href="/#about" className="icon-link left">
-                    <FeatherIcon icon="info" />
-                    <span>About Us</span>
-                  </a>
-                </li> */}
                 <li>
                   <a href="https://angel.co/company/cometa-intellect/jobs" target="_blank" rel="noreferrer noopener" className="icon-link">
                     <span>Jobs</span>
+                    <FeatherIcon icon="external-link" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://internshala.com/internships/internship-at-Cometa%20Intellect%20LLP" target="_blank" rel="noreferrer noopener" className="icon-link">
+                    <span>Internships</span>
                     <FeatherIcon icon="external-link" />
                   </a>
                 </li>
@@ -87,16 +87,6 @@ const Layout = ({ children }) => {
                       icon="facebook"
                     />
                   </a>
-                  {/* <a href="#!">
-                    <FeatherIcon
-                      icon="instagram"
-                    />
-                  </a>
-                  <a href="#!">
-                    <FeatherIcon
-                      icon="slack"
-                    />
-                  </a> */}
                   <a href="https://www.linkedin.com/company/cometa-intellect-llp/" target="_blank" rel="noreferrer noopener">
                     <FeatherIcon
                       icon="linkedin"

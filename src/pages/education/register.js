@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Layout2 from '../../components/layout2'
 import SEO from '../../components/seo'
+import withLocation from '../../components/withLocation'
 
-const Register = () => {
+const Register = ({ search }) => {
+
+	const { action } = search
 
 	const [regData, setRegData] = useState({
 		"student_full_name": "",
@@ -14,11 +17,20 @@ const Register = () => {
 		"phone_number": "",
 		"place": ""
 	})
+
 	const [pay1Data, setPay1Data] = useState(undefined)
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [loading, setLoading] = useState(false)
 	const [processing, setProcessing] = useState(false)
 	const [pay1Err, setPay1Err] = useState(undefined)
+
+	useEffect(() => {
+		if (action) {
+			console.log(action)
+			setRegData({ ...regData, "is_demo": true })
+		}
+		document.querySelector('header.header a.button').classList.add('hidden');
+	}, [action])
 
 	const makePayMent = (data, callback) => {
 		// https://quiz-app.cometaintellect.com/apiv1/save_form_and_generate_paytm_checksum/
@@ -75,6 +87,7 @@ const Register = () => {
 					{pay1Data ? (<>
 						<p>{pay1Data.message}</p>
 						{pay1Data.proceed_to_payment ? (<>
+							<h2>&#x20B9; {pay1Data.amount}</h2>
 							<form id="pay1Form" method="post" action={`https://securegw.paytm.in/theia/api/v1/showPaymentPage?mid=${pay1Data.mid}&orderId=${pay1Data.orderId}`} name="paytm">
 								<input type="hidden" name="mid" value={pay1Data.mid} />
 								<input type="hidden" name="orderId" value={pay1Data.orderId} />
@@ -98,7 +111,12 @@ const Register = () => {
 			</div>
 			<section className="section">
 				<div className="form_container">
-					<h2 className="center">Register for App Developer Coaching</h2>
+					{action ? (<>
+						<h2 className="center">Book FREE Trial</h2>
+						<p className="center">Register for App Developer Coaching</p>
+					</>) : (<>
+						<h2 className="center">Register for App Developer Coaching</h2>
+					</>)}
 					<div className="divider"></div>
 					{pay1Err ? (<p className="err-text">API_ERR, Please reload.</p>) : (<></>)}
 					<form method="POST" action="" onSubmit={handleSubmit}>
@@ -152,4 +170,4 @@ const Register = () => {
 	)
 }
 
-export default Register
+export default withLocation(Register)

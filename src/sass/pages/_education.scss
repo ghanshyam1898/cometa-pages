@@ -1,3 +1,29 @@
+.hero{
+	// min-height: 40vh;
+	background-color: transparent;
+	&.hero-edu{
+		border-bottom: 1px solid #ccc;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	&-intro{
+		h1{
+			font-size: 2.5rem;
+			font-family: $font-2;
+			letter-spacing: 1px;
+			font-weight: $default;
+			line-height: 1;
+			color:#fff;
+			span{
+				display: block;
+				font-size: $fz-lg;
+				color: $cd;
+			}
+		}
+	}
+}
+
 .education-header{
 	display: flex;
 	justify-content: space-between;

@@ -2,3 +2,11 @@
     0%   { transform: translate(0, 0); }
     100% { transform: translate(-100%, 0); }
 }
+@keyframes c {
+    0% {
+        background-position: -5000px 0;
+    }
+    100% {
+        background-position: 5000px 0;
+    }
+}

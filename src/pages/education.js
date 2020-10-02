@@ -16,7 +16,7 @@ const Education = () => {
 				<div className="hero-intro">
 					<h1>Education @ Cometa</h1>
 					<div className="center hero-cta-container">
-						<button className="button button-hero">Book a FREE Trial</button>
+						<Link className="button button-hero" to="/education/register/?action=demo">Book a FREE Trial</Link>
 					</div>
 				</div>
 			</header>

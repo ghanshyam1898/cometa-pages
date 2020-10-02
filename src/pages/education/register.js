@@ -5,7 +5,11 @@ import SEO from '../../components/seo'
 const Register = () => {
 
 	const [regData, setRegData] = useState({
-		"full_name": "",
+		"student_full_name": "",
+		"father_full_name": "",
+		"mother_full_name": "",
+		"student_dob": "",
+		"is_demo": false,
 		"standard": "",
 		"phone_number": "",
 		"place": ""
@@ -17,7 +21,8 @@ const Register = () => {
 	const [pay1Err, setPay1Err] = useState(undefined)
 
 	const makePayMent = (data, callback) => {
-		fetch(`https://quiz-app.cometaintellect.com/apiv1/save_form_and_generate_paytm_checksum/`, {
+		// https://quiz-app.cometaintellect.com/apiv1/save_form_and_generate_paytm_checksum/
+		fetch(`https://api.cometaintellect.com/education_student_registration/`, {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"
@@ -37,7 +42,8 @@ const Register = () => {
 		setLoading(true)
 		makePayMent(regData, (data) => {
 			setLoading(false)
-			if (data && data.mid) {
+			console.log('data', data);
+			if (data) {
 				setPay1Data(data)
 				setIsModalOpen(true)
 				if (typeof window !== 'undefined') {
@@ -48,6 +54,7 @@ const Register = () => {
 				setPay1Err(data)
 			}
 		})
+		console.log(regData);
 	}
 
 	const submitPay1 = () => {
@@ -65,22 +72,27 @@ const Register = () => {
 			<div className={`modal-bg ${isModalOpen ? 'open' : ''}`} aria-label="Pay Modal Close" onClick={closeModal} role="button" tabIndex={0} onKeyDown={() => { }}></div>
 			<div className={`modal ${isModalOpen ? 'open' : ''}`}>
 				<div className="modal-content">
-					<h3>Almost There!</h3>
-					<p>You can pay the first month fees &#x20B9; 3000 to complete your registration.</p>
 					{pay1Data ? (<>
-						{/* https://securegw-stage.paytm.in/ */}
-						<form id="pay1Form" method="post" action={`https://securegw.paytm.in/theia/api/v1/showPaymentPage?mid=${pay1Data.mid}&orderId=${pay1Data.orderId}`} name="paytm">
-							<input type="hidden" name="mid" value={pay1Data.mid} />
-							<input type="hidden" name="orderId" value={pay1Data.orderId} />
-							<input type="hidden" name="txnToken" value={pay1Data.txnToken} />
-						</form>
-						<div className="right-align" style={{ 'marginTop': '2rem' }}>
-							{processing ? (<>
-								<button className="button disabled">Processing ...</button>
-							</>) : (<>
-								<button className="button button-nav-p" onClick={submitPay1}>Pay Now</button>
-							</>)}
-						</div>
+						<p>{pay1Data.message}</p>
+						{pay1Data.proceed_to_payment ? (<>
+							<form id="pay1Form" method="post" action={`https://securegw.paytm.in/theia/api/v1/showPaymentPage?mid=${pay1Data.mid}&orderId=${pay1Data.orderId}`} name="paytm">
+								<input type="hidden" name="mid" value={pay1Data.mid} />
+								<input type="hidden" name="orderId" value={pay1Data.orderId} />
+								<input type="hidden" name="txnToken" value={pay1Data.txnToken} />
+							</form>
+							<div className="right-align" style={{ 'marginTop': '2rem' }}>
+								{processing ? (<>
+									<button className="button disabled">Processing ...</button>
+								</>) : (<>
+									<button className="button button-nav-p" onClick={submitPay1}>Pay Now</button>
+								</>)}
+							</div>
+						</>) : (<>
+							<div className="right-align" style={{ 'marginTop': '2rem' }}>
+								<button className="button button-nav-p" onClick={closeModal}>Okay</button>
+							</div>
+						</>)}
+
 					</>) : (<></>)}
 				</div>
 			</div>
@@ -92,7 +104,19 @@ const Register = () => {
 					<form method="POST" action="" onSubmit={handleSubmit}>
 						<div className="input_field">
 							<label htmlFor="f_name">Full Name</label>
-							<input type="text" name="f_name" id="f_name" placeholder="e.g. Harry Potter" onChange={(e) => { setRegData({ ...regData, "full_name": e.target.value }) }} required />
+							<input type="text" name="f_name" id="f_name" placeholder="e.g. Harry Potter" onChange={(e) => { setRegData({ ...regData, "student_full_name": e.target.value }) }} required />
+						</div>
+						<div className="input_field">
+							<label htmlFor="father_name">Father's Name</label>
+							<input type="text" name="father_name" id="father_name" onChange={(e) => { setRegData({ ...regData, "father_full_name": e.target.value }) }} required />
+						</div>
+						<div className="input_field">
+							<label htmlFor="mother_name">Mother's Name</label>
+							<input type="text" name="mother_name" id="mother_name" onChange={(e) => { setRegData({ ...regData, "mother_full_name": e.target.value }) }} required />
+						</div>
+						<div className="input_field">
+							<label htmlFor="student_dob">Date of Birth</label>
+							<input type="date" name="dob" id="student_dob" onChange={(e) => { setRegData({ ...regData, "student_dob": e.target.value }) }} required />
 						</div>
 						<div className="input_field">
 							<label htmlFor="std">Standard</label>

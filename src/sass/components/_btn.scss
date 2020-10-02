@@ -9,6 +9,8 @@ button{
 	padding: .5rem .75rem;
 	font-size: $fz-sm - .1rem; //padding*2+margin+2
 	cursor: pointer;
+	color: inherit;
+	font-weight: $mid;
 	// text-transform: uppercase;
 }
 .button-nav{
@@ -65,7 +67,7 @@ button{
 	border-right: 3px solid darken($c4,10%);
 	border-bottom: 3px solid darken($c4,10%);
 	background-image: linear-gradient(to bottom right, $c4, darken($c4,10%));
-	color: #fff;
+	color: #fff !important;
 
 	&:focus{
 		box-shadow: 0 0 0 2px darken($c4, 10%);

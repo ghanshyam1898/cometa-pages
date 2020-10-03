@@ -2,7 +2,7 @@ module.exports = {
   // pathPrefix: "/cometa-pages",
   siteMetadata: {
     title: `Cometa Intellect LLP`,
-    description: `We develop Android apps, IOS Apps, Websites and Desktop software. We are also working on cool new stuff for Cometa. We will soon present you with Cometa Education platform, hackathons, Learning resources and more! Staytuned @ Cometa`,
+    description: `We develop Android apps, IOS Apps, Websites and Desktop software. We are also working on cool new \"stuff\" for Cometa. We will soon present you with Cometa Education platform, hackathons, Learning resources and more! Staytuned @ Cometa`,
     author: `@_saroj_smiley`,
   },
   plugins: [

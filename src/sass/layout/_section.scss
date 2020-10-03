@@ -39,6 +39,8 @@
 }
 .section-newletter {
 	padding: 3rem;
+	min-height: 15rem;
+
 	@include respond(tab){
 		padding: 1rem;
 	}
@@ -46,11 +48,21 @@
 		padding: 0;
 	}
 }
+
 .section-team{
 	@include respond(tab){
 		padding: 1rem 1rem 2rem;
 	}
 	@include respond(phone){
 		padding: 1rem .5rem 2rem;
+	}
+}
+
+.section-contact {
+	@include respond(tab){
+		padding: 1rem;
+	}
+	@include respond(phone){
+		padding: .5rem;
 	}
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Layout2 from '../../components/layout2'
 import SEO from '../../components/seo'
 import withLocation from '../../components/withLocation'
+import { makePayMent } from '../../helpers'
 
 const Register = ({ search }) => {
 
@@ -32,29 +33,11 @@ const Register = ({ search }) => {
 		document.querySelector('header.header a.button').classList.add('hidden');
 	}, [action])
 
-	const makePayMent = (data, callback) => {
-		// https://quiz-app.cometaintellect.com/apiv1/save_form_and_generate_paytm_checksum/
-		fetch(`https://api.cometaintellect.com/education_student_registration/`, {
-			method: 'POST',
-			headers: {
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify(data)
-		})
-			.then(res => res.json())
-			.then(res_data => {
-				callback(res_data)
-			})
-			.catch(err => console.log('ERR', err))
-	}
-
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		console.log('submit')
 		setLoading(true)
 		makePayMent(regData, (data) => {
 			setLoading(false)
-			console.log('data', data);
 			if (data) {
 				setPay1Data(data)
 				setIsModalOpen(true)
@@ -66,7 +49,6 @@ const Register = ({ search }) => {
 				setPay1Err(data)
 			}
 		})
-		console.log(regData);
 	}
 
 	const submitPay1 = () => {

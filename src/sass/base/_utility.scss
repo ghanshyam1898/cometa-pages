@@ -64,3 +64,28 @@
   margin: 1rem 0;
   background-color: $cl-2;
 }
+
+input[readonly]{
+  box-shadow: none !important;
+  border-color: #ccc !important;
+}
+.form-msg{
+  font-size: .95rem;
+  text-align: center;
+  margin: 1rem 0 .5rem;
+  font-weight: $mid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg{
+    margin-right: .5rem;
+    width: 1rem;
+    height: 1rem;
+    line-height: .85rem;
+  }
+
+  &.success{
+    color: #46aa2b;
+  }
+}

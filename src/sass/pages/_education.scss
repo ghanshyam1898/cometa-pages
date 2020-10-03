@@ -1,7 +1,7 @@
 .hero{
 	// min-height: 40vh;
-	background-color: transparent;
 	&.hero-edu{
+		background-color: #ccc;
 		border-bottom: 1px solid #ccc;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -155,7 +155,8 @@
 			font-size: .95rem;
 			font-weight: $mid;
 		}
-		input,select{
+		input,select, textarea{
+			resize: none;
 			outline: none;
 			display: block;
 			width: 100%;
@@ -167,6 +168,17 @@
 			&:focus{
 				border-color: $cl-1;
 			}
+		}
+	}
+
+	&--home{
+		max-width: 32rem !important;
+		width: 32rem;
+		margin: 1rem auto !important;
+
+		@include respond(tab){
+			max-width: 100%;
+			width: 100%;
 		}
 	}
 }

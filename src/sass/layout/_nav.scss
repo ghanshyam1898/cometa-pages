@@ -29,14 +29,23 @@
 
 	&-side{
 		ul li {
-			border-bottom: 1px solid #ccc;
+			// border-bottom: 1px solid #ccc;
+			margin: .5rem 0;
+			border-right: 3px solid transparent;
+			transition: border-color 100ms;
+			&:hover{
+				border-color: $c3;
+			}
 			a{
-				&:hover{background-color: rgba(0,0,0,.05);}
+				&:hover{
+					background-color: rgba(0,0,0,.05);
+				}
 				display: block;
-				padding: .5rem 1rem;
+				padding: .6rem 1rem;
 				color: $c3;
-				font-size: $fz-sm;
+				font-size: $fz-sm + .05rem;
 				font-weight: $mid;
+				transition: background-color 300ms;
 			}
 		}
 		&.open{

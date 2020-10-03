@@ -78,7 +78,7 @@ const Layout = ({ children }) => {
                 </li>
               </ul>
             </div>
-            <div className="footer-nav-box footer-nav-social" id="contact">
+            <div className="footer-nav-box footer-nav-social">
               <h2>Connect with Us</h2>
               <ul className="footer-nav-box-links">
                 <li className="social-media-list">

@@ -89,3 +89,26 @@ input[readonly]{
     color: #46aa2b;
   }
 }
+
+.full-w{display: block;width: 100% !important;}
+
+.cometa-scroll{
+  overflow-y: auto;
+  &.scroll-x{
+    overflow: auto hidden;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent; 
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $cl-1;
+		border-radius: 8px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: $c4;
+	}
+}

@@ -66,3 +66,12 @@
 		padding: .5rem;
 	}
 }
+.edu-course{
+	padding: 2rem;
+	@include respond(tab){
+		padding: 2rem 1rem;
+	}
+	@include respond(phone){
+		padding: 2rem .5rem;
+	}
+}

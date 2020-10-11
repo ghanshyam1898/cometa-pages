@@ -27,7 +27,6 @@ const Register = ({ search }) => {
 
 	useEffect(() => {
 		if (action) {
-			console.log(action)
 			setRegData({ ...regData, "is_demo": true })
 		}
 		document.querySelector('header.header a.button').classList.add('hidden');
@@ -122,12 +121,15 @@ const Register = ({ search }) => {
 							<label htmlFor="std">Standard</label>
 							<select name="std" id="std" onBlur={(e) => { setRegData({ ...regData, "standard": e.target.value }) }} defaultValue="" required>
 								<option value="">SELECT</option>
+								<option value="4">4th</option>
 								<option value="5">5th</option>
 								<option value="6">6th</option>
 								<option value="7">7th</option>
 								<option value="8">8th</option>
 								<option value="9">9th</option>
 								<option value="10">10th</option>
+								<option value="11">11th</option>
+								<option value="12">12th</option>
 							</select>
 						</div>
 						<div className="input_field">

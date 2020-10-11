@@ -357,6 +357,10 @@
 				}
 				&:after{
 					display: inline-block;
+
+					@include respond(phone){
+						display: none;
+					}
 				}
 			}
 
@@ -384,13 +388,13 @@
 			margin: 0 auto;
 
 			@include respond(tab){
-			padding: 1rem .5rem;
-			grid-template-columns: repeat(3,360px);
-			//@mobile design
-			overflow-x: auto;
+				padding: 1rem .5rem;
+				grid-template-columns: repeat(3,360px);
+				//@mobile design
+				overflow-x: auto;
 			}
 			@include respond(phone){
-			grid-template-columns: repeat(3,minmax(90%,360px));
+				grid-template-columns: repeat(3,minmax(90%,360px));
 			}
 		}
 

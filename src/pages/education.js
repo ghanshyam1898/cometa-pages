@@ -76,9 +76,9 @@ const Education = () => {
 			<section className="section edu-course">
 				<h2 className="section-heading">Curriculum &amp; Pricing</h2>
 				<div className="edu-course-nav">
-					<div className={`edu-course-nav--link ${activeCard === 'beginner' ? 'active' : ''}`} data-course-type="beginner" onClick={handleCourseNavClick} >Beginner<span>{`(Standard 5-7)`}</span></div>
-					<div className={`edu-course-nav--link ${activeCard === 'advanced' ? 'active' : ''}`} data-course-type="advanced" onClick={handleCourseNavClick} >Advanced<span>{`(Standard 8-9)`}</span></div>
-					<div className={`edu-course-nav--link ${activeCard === 'professional' ? 'active' : ''}`} data-course-type="professional" onClick={handleCourseNavClick} >Professional<span>{`(Standard 10+)`}</span></div>
+					<div className={`edu-course-nav--link ${activeCard === 'beginner' ? 'active' : ''}`} data-course-type="beginner" onClick={handleCourseNavClick} >Beginner<span>{`(Standard 4-6)`}</span></div>
+					<div className={`edu-course-nav--link ${activeCard === 'advanced' ? 'active' : ''}`} data-course-type="advanced" onClick={handleCourseNavClick} >Advanced<span>{`(Standard 7-9)`}</span></div>
+					<div className={`edu-course-nav--link ${activeCard === 'professional' ? 'active' : ''}`} data-course-type="professional" onClick={handleCourseNavClick} >Professional<span>{`(Standard 10-12+)`}</span></div>
 				</div>
 				<div className="edu-course-card--container cometa-scroll scroll-x">
 					{cardData && cardData.map((card, i) => {

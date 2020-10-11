@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import FeatherIcon from '../components/FeatherIcon'
 
@@ -21,7 +22,7 @@ const CourseCard = ({ heading, c, save, desc, pdfLink, cPrice, aPrice, buyLink, 
 					<span className="current">Rs. {cPrice}</span>
 					<del className="save">Rs. {aPrice}</del>
 				</div>
-				<a href={buyLink} style={{ 'textTransform': 'uppercase' }} className="button button-nav-p full-w button-trial">Buy Now</a>
+				<Link to={buyLink} style={{ 'textTransform': 'uppercase' }} className="button button-nav-p full-w button-trial">Book a FREE Trial</Link>
 			</div>
 			<div className="edu-course-card__meta">
 				<h4>

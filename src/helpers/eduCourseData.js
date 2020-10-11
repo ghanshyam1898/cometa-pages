@@ -6,7 +6,7 @@ export const beginnerCourseData = [{
 	pdfLink: "#!",
 	cPrice: "8,999",
 	aPrice: "9,999",
-	buyLink: "#!",
+	buyLink: "/education/register/?action=demo",
 	achievement: [{
 		icon: "monitor",
 		text: "Introduction to <br> Coding"
@@ -20,7 +20,7 @@ export const beginnerCourseData = [{
 	pdfLink: "#!",
 	cPrice: "8,999",
 	aPrice: "9,999",
-	buyLink: "#!",
+	buyLink: "/education/register/?action=demo",
 	achievement: [{
 		icon: "monitor",
 		text: "Introduction to <br> Coding"
@@ -38,7 +38,7 @@ export const beginnerCourseData = [{
 	pdfLink: "#!",
 	cPrice: "8,999",
 	aPrice: "9,999",
-	buyLink: "#!",
+	buyLink: "/education/register/?action=demo",
 	achievement: [{
 		icon: "monitor",
 		text: "Introduction to <br> Coding"
@@ -61,7 +61,7 @@ export const advancedCourseData = [{
 	pdfLink: "#!",
 	cPrice: "9,999",
 	aPrice: "14,999",
-	buyLink: "#!",
+	buyLink: "/education/register/?action=demo",
 	achievement: [{
 		icon: "monitor",
 		text: "Introduction to <br> Coding"
@@ -75,7 +75,7 @@ export const advancedCourseData = [{
 	pdfLink: "#!",
 	cPrice: "9,999",
 	aPrice: "14,999",
-	buyLink: "#!",
+	buyLink: "/education/register/?action=demo",
 	achievement: [{
 		icon: "monitor",
 		text: "Introduction to <br> Coding"
@@ -93,7 +93,7 @@ export const advancedCourseData = [{
 	pdfLink: "#!",
 	cPrice: "9,999",
 	aPrice: "14,999",
-	buyLink: "#!",
+	buyLink: "/education/register/?action=demo",
 	achievement: [{
 		icon: "monitor",
 		text: "Introduction to <br> Coding"
@@ -116,7 +116,7 @@ export const professionalCourseData = [{
 	pdfLink: "#!",
 	cPrice: "8,999",
 	aPrice: "9,999",
-	buyLink: "#!",
+	buyLink: "/education/register/?action=demo",
 	achievement: [{
 		icon: "monitor",
 		text: "Introduction to <br> Coding"
@@ -130,7 +130,7 @@ export const professionalCourseData = [{
 	pdfLink: "#!",
 	cPrice: "8,999",
 	aPrice: "9,999",
-	buyLink: "#!",
+	buyLink: "/education/register/?action=demo",
 	achievement: [{
 		icon: "monitor",
 		text: "Introduction to <br> Coding"
@@ -148,7 +148,7 @@ export const professionalCourseData = [{
 	pdfLink: "#!",
 	cPrice: "8,999",
 	aPrice: "9,999",
-	buyLink: "#!",
+	buyLink: "/education/register/?action=demo",
 	achievement: [{
 		icon: "monitor",
 		text: "Introduction to <br> Coding"

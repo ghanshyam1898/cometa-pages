@@ -33,7 +33,7 @@ const Layout2 = ({ children }) => {
               <h2>Connect with Us</h2>
               <ul className="footer-nav-box-links">
                 <li className="social-media-list">
-                  <a href="https://www.facebook.com/cometa.intellect" target="_blank" rel="noreferrer noopener">
+                  <a href="https://www.facebook.com/cometa.intellect/" target="_blank" rel="noreferrer noopener">
                     <FeatherIcon
                       icon="facebook"
                     />

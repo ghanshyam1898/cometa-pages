@@ -317,7 +317,7 @@ const IndexPage = () => {
       </section>
       <section className="section section-contact" id="contact">
         <h2 className="section-heading"><span>Contact</span> Us</h2>
-        <p className="section-text">Got any Query? Contact us ASAP!</p>
+        
         <div className="newletter-form-container form_container form_container--home">
           {cMsg ? (<p className="form-msg success" style={{ 'marginBottom': '1rem' }}>
             <FeatherIcon icon="check-circle" />

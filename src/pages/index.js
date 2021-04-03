@@ -256,46 +256,6 @@ const IndexPage = () => {
           </ul>
         </div>
       </section>
-      <section className="section section-team" id="team">
-        <h2 className="section-heading">The <span>Team</span></h2>
-        <div className="team">
-          <div className="member">
-            <figure>
-              <img src={GhanuImg} alt="Ghanshyam Agrawal" />
-            </figure>
-            <h3>Ghanshyam Agrawal</h3>
-            {/* <p>Founder</p> */}
-          </div>
-          <div className="member">
-            <figure>
-              <img src={SumanImg} alt="Suman Agrawal" />
-            </figure>
-            <h3>Suman Agrawal</h3>
-            {/* <p>Designation</p> */}
-          </div>
-          <div className="member">
-            <figure>
-              <img src={SarojImg} alt="Saroj Kumar Sahoo" />
-            </figure>
-            <h3>Saroj Kumar Sahoo</h3>
-            {/* <p>Designation</p> */}
-          </div>
-          <div className="member">
-            <figure>
-              <img src={SupriyaImg} alt="Supriya Pradhan" />
-            </figure>
-            <h3>Supriya Pradhan</h3>
-            {/* <p>Designation</p> */}
-          </div>
-          <div className="member">
-            <figure>
-              <img src={SakshiImg} alt="Sakshi Uppoor" />
-            </figure>
-            <h3>Sakshi Uppoor</h3>
-            {/* <p>Designation</p> */}
-          </div>
-        </div>
-      </section>
       <section className="section section-newletter abs-center">
         <div className="newletter-form-container">
           <h3>Signup to our Monthly Newletter, get Exciting Benefits!</h3>
